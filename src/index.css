@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-glass border border-white/20 shadow-glass;
+}
+
+.glass-dark {
+  @apply bg-slate-900/80 backdrop-blur-glass border border-white/10 shadow-glass;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full hover:bg-primary-600;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+button,
+a,
+.interactive {
+  @apply transition-all duration-300 ease-out;
+}
